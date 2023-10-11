@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/feather-icons"></script>
+
+
+<head>
+    <title>Contato</title>
+    <style>
+        /* Seu CSS existente */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: url(Imagem-fundo/mesquita.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header nav {
+            /* espaçamento sessões menu*/
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+
+            /* menu fixo*/
+            position: fixed;
+            width: 100%;
+            top: 0;
+            border-bottom: 1px solid;
+            background-color: rgb(1, 91, 137);
+            box-shadow: 0 0 1em rgb(17, 21, 1);
+            transition: 0.9s;
+            height: 70px;
+            padding: 10px 5px;
+        }
+
+        /*MENU SUPERIOR*/
+        header nav:hover {
+            background-color: rgba(137, 57, 11, 0.948);
+            /*  efeito transition*/
+        }
+
+        /* TRAVEL CODE*/
+        header nav p {
+            font-weight: bold;
+            margin: 0 30px;
+            padding: 15px;
+            margin-bottom: 50px;
+        }
+
+        header nav p:hover {
+            margin: 0 15px;
+            border-radius: 30px;
+            box-shadow: 10px 5px 5px rgba(60, 25, 5, 0.892);
+            transition: 0.9s;
+            cursor: pointer;
+        }
+
+        /* bolinhas ao lado do menu*/
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        form {
+            width: 400px;
+            margin: 50px auto;
+            /* Adicionamos margens para posicionar o formulário no centro verticalmente */
+            padding: 20px;
+            /* Adicionamos um espaçamento interno para o formulário */
+            border: 1px solid #ccc;
+            /* Adicionamos uma borda para melhor visualização do formulário */
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0 30px;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        /*menu*/
+        header nav ul li {
+            /* margem da borda*/
+            margin: 0 15px;
+            border-radius: 30px;
+        }
+
+        /* Começo - Menu href estilo*/
+        header nav ul li a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+            border-radius: 30px;
+            transition: 0.9s;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(167, 77, 13, 0.995);
+            box-shadow: 10px 5px 5px rgba(60, 25, 5, 0.892);
+        }
+
+        /* Estilo do header e footer (adapte de acordo com o seu menu e footer) */
+        header,
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Container principal */
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Lista de informações */
+        aside {
+            width: 300%;
+            max-width: 200px;
+        }
+
+        .info-list {
+            width: 100%;
+            list-style: none;
+            background-color: #f2f2f2;
+            padding: 5%;
+            border-radius: 5px;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info-icon {
+            margin-right: 10px;
+        }
+
+        /* Formulário */
+        .form-container {
+            width: 50%;
+            max-width: 400px;
+
+        }
+
+        form {
+            background-color: #145080;
+            padding: 10px;
+            margin-top: 0px;
+            border-radius: 7px;
+
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: #1a1a1a;
+            border-radius: 6px;
+
+        }
+
+        .titulo-fale-conosco {
+            color: rgb(255, 255, 255);
+            animation: pulse 5s infinite;
+
+            background-color: rgba(18, 77, 141, 0.814);
+            border-radius: 5px;
+
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cb890f;
+
+        }
+
+        input[type="submit"] {
+            /*botão formulario*/
+            background-color: #0d0117a1;
+            color: rgb(8, 0, 0);
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            bottom: center;
+
+        }
+
+        input[type="submit"]:hover {
+            /*botao 'enviar' */
+            background-color: #0c698ee7;
+            transition: 0.9s;
+            fill: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .footer-logo {
+            color: #b43f08;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            margin-top: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            .form-container,
+            aside {
+                width: 90%;
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 24px;
+            }
+
+            form {
+                padding: 10px;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <!--Inicio do Menu-->
+        <nav>
+
+            <p> <a href="index-Travel.html"></a>Travel Code</p>
+            <ul>
+                <li><a href="index-Travel.html">HOME</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="#promocoes">PROMOÇÕES</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <ul class="info-list">
+                <li>
+                    <span class="info-icon">&#128100;</span>
+                    Nome: <p>Travel Code</p>
+                    <hr>
+
+                </li>
+                <li>
+                    <span class="info-icon">&#9742;</span>
+                    Telefone:<p>(69) 9 9999-9999</p>
+                    <hr>
+
+                </li>
+                <li>
+                    <span class="info-icon">&#9993;</span>
+                    E-mail<p>travelcode@travelcode.com</p>
+                    <hr>
+
+                </li>
+                <li>
+                    <span class="info-icon">&#128172;</span>
+                    Redes Sociais
+
+                </li>
+            </ul>
+        </aside>
+
+        <div class="form-container">
+            <h2 class="titulo-fale-conosco">Fale Conosco</h2>
+
+            <form action="/enviar-contato" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-logo">Travel Code</span>
+        <p>
+        <div><i data-feather="phone"></i>
+            <i data-feather="github"></i>
+            <i data-feather="instagram"></i>
+            <i data-feather="facebook"></i>
+        </div>
+        </p>
+        <script>
+            feather.replace()
+        </script>
+
+
+        <p class="footer-text">Desenvolvido por Gregory Rodrigues &copy; 2023</p>
+    </footer>
+</body>
+
+
+
+</html>

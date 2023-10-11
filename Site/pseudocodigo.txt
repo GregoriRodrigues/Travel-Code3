@@ -1,0 +1,71 @@
+
+
+<<<< Algoritmo "AgenciaDeViagens" >>>>>
+
+// Seção de Declarações das variáveis
+Var
+   opcao: inteiro
+   clientes: vetor[1..50] de registro // Supondo limite de 50 clientes
+      nome: string
+      idade: inteiro
+      telefone: string
+   destinos: vetor[1..50] de registro // Supondo limite de 50 destinos
+      local: string
+      preco: real
+   contClientes, contDestinos: inteiro
+
+// Seção de Comandos, procedimentos, funções, operadores, etc...
+Inicio
+   contClientes := 0
+   contDestinos := 0
+
+   Repita
+      Escrever("---- Menu da Agência de Viagens ----")
+      Escrever("1 - Cadastrar Cliente")
+      Escrever("2 - Cadastrar Destino")
+      Escrever("3 - Consultar Clientes")
+      Escrever("4 - Consultar Destinos")
+      Escrever("0 - Sair")
+      Escrever("-------------------------------------")
+      Escrever("Escolha a opção desejada: ")
+      Leia(opcao)
+
+      Escolha opcao
+         Caso 1:
+            contClientes := contClientes + 1
+            Escrever("---- Cadastro de Cliente ----")
+            Escrever("Digite o nome do cliente: ")
+            Leia(clientes[contClientes].nome)
+            Escrever("Digite a idade do cliente: ")
+            Leia(clientes[contClientes].idade)
+            Escrever("Digite o telefone do cliente: ")
+            Leia(clientes[contClientes].telefone)
+         Caso 2:
+            contDestinos := contDestinos + 1
+            Escrever("---- Cadastro de Destino ----")
+            Escrever("Digite o local do destino: ")
+            Leia(destinos[contDestinos].local)
+            Escrever("Digite o preço do destino: ")
+            Leia(destinos[contDestinos].preco)
+         Caso 3:
+            Escrever("---- Consulta de Clientes ----")
+            Para i de 1 ate contClientes faca
+               Escrever("Cliente ", i)
+               Escrever("Nome: ", clientes[i].nome)
+               Escrever("Idade: ", clientes[i].idade)
+               Escrever("Telefone: ", clientes[i].telefone)
+            FimPara
+         Caso 4:
+            Escrever("---- Consulta de Destinos ----")
+            Para i de 1 ate contDestinos faca
+               Escrever("Destino ", i)
+               Escrever("Local: ", destinos[i].local)
+               Escrever("Preço: ", destinos[i].preco)
+            FimPara
+         Caso 0:
+            Escrever("Encerrando o programa...")
+         Caso contrario:
+            Escrever("Opção inválida!")
+      FimEscolha
+   Enquanto opcao <> 0
+Fimalgoritmo

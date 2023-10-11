@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário com Responsividade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+
+
+/* Estilos gerais */
+<style> * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do header e footer (adapte de acordo com o seu menu e footer) */
+header, footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+}
+
+/* Container principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Formulário */
+.form-container {
+    width: 50%;
+    max-width: 400px;
+}
+
+form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Lista de informações */
+aside {
+    width: 50%;
+    max-width: 400px;
+}
+
+.info-list {
+    list-style: none;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, aside {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+</style>
+
+<body>
+    <header>
+        <!-- Seu menu aqui -->
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form action="/enviar-formulario" method="post">
+                <h2>Fale Conosco</h2>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <aside>
+            <ul class="info-list">
+                <li>Nome</li>
+                <li>Telefone</li>
+                <li>E-mail</li>
+                <li>Redes Sociais</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- Seu footer aqui -->
+    </footer>
+</body>
+</html>
