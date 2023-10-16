@@ -10,52 +10,91 @@
 
     <title>Travel Code</title>
 </head>
-<header>
-    <!--Inicio do Menu-->
-    <nav>
-        <p>Travel Code</p>
+
+<body>
+    <header>
+        <!--Inicio do Menu-->
+        <nav>
+            <p>Travel Code</p>
 
 
-        <ul>
-            <li><a href="index-Travel.html">HOME</a></li>
-            <li><a href="destinos.html">DESTINOS</a></li>
-            <li><a href="#promocoes">PROMOÇÕES</a></li>
-            <li><a href="#servicos">SERVIÇOS</a></li>
-            <li><a href="contato.html">CONTATO</a></li>
-        </ul>
+            <ul>
+                <li><a href="index-Travel.html">HOME</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="#promocoes">PROMOÇÕES</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
 
-    </nav>
-    <!--Fim do Menu-->
+        </nav>
+        <!--Fim do Menu-->
 
-    <div id="home" class="header-content">
+        <div id="home" class="header-content">
 
-        <h1><span>CAPADÓCIA</span></h1>
+            <h1><span>CAPADÓCIA</span></h1>
 
-        <p>
-        <h3>Um lugar dos sonhos e maravilhas! </h3>
-        </p>
-        <P>Descubra a mágica dessa região única, onde balões coloridos dançam nos céus, formações rochosas
-            impressionantes contam histórias antigas e experiências inesquecíveis aguardam por você. </P>
-        <button>
-            <a href="destinos.html" class="bota-saiba">Saiba Mais</a>
-        </button>
-    </div>
-</header>
-    
-<!-- Formulário de busca de voos -->
+            <p>
+            <h3>Um lugar dos sonhos e maravilhas! </h3>
+            </p>
+            <P>Descubra a mágica dessa região única, onde balões coloridos dançam nos céus, formações rochosas
+                impressionantes contam histórias antigas e experiências inesquecíveis aguardam por você. </P>
+            <button>
+                <a href="destinos.html" class="bota-saiba">Saiba Mais</a>
+            </button>
+        </div>
+    </header>
+
+<!-- INICIO Formulário de buscar voos -->
 <div class="form-wrapper">
     <form class="form-container">
-
-        
-        
+        <div class="form-row">
+            <h2>Passagens Aéreas</h2>
+            <div class="form-group">
+                <label>Tipo de Viagem</label>
+                <div class="radio-buttons">
+                    <label>
+                        <input type="radio" name="trip-type" value="round-trip" checked> Ida e Volta
+                    </label>
+                    <label>
+                        <input type="radio" name="trip-type" value="one-way"> Somente Ida
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Origem</label>
+                <input type="text" name="origin" placeholder="Origem">
+            </div>
+            <div class="form-group">
+                <label>Destino</label>
+                <input type="text" name="destination" placeholder="Destino">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Data de Ida</label>
+                <input type="date" name="departure-date">
+            </div>
+            <div class="form-group">
+                <label>Data de Volta</label>
+                <input type="date" name="return-date">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Número de Passageiros</label>
+                <input type="number" name="passengers" min="1" max="10">
+            </div>
+        </div>
+        <div class="form-row">
+            <button type="submit">Vamos Voar</button>
+        </div>
     </form>
+</div> <!--FIM FORMULÁRIO-->
 </div>
 
 
-
-
-
-<body>
 
     <!--Inicio PACOTES-->
     <section id="promocoes" class="pacotes">

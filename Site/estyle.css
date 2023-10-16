@@ -391,20 +391,20 @@ header span {
 
 
 
-/* Aqui começa o estilo do formulário passagem */
+/* ------------------Aqui começa o estilo do formulário passagem------------ */
 .form-wrapper {
-    max-width:  1300px;
+    max-width: 1300px;
     margin: 10px auto;
-    padding: 15px;
-    background-color: rgba(14, 5, 3, 0.768);
+    padding: 10px;
+    background-color: rgba(104, 39, 7, 0.828);
     border-radius: 10px;
-    
 }
 
-.form-container { /*estou aqui */
+
+
+.form-container {
     display: flex;
-    flex-direction: row;    
-    
+    flex-direction: row;
 }
 
 .form-row {
@@ -413,7 +413,6 @@ header span {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    
 }
 
 .form-row h2 {
@@ -421,7 +420,6 @@ header span {
     text-align: center;
     margin: 0;
     font-size: 1.2rem;
-    
 }
 
 .form-group {
@@ -431,23 +429,20 @@ header span {
 
 .form-group label {
     display: block;
-    margin-bottom: 5px; 
-    
+    margin-bottom: 5px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="date"],
 .form-group select {
-    width: 80%;
+    width: 100%; /* Ocupa a largura total em telas menores */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-   
 }
 
 .form-group select {
     width: 100%;
-    
 }
 
 .form-container button {
@@ -455,17 +450,29 @@ header span {
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
-    background: rgb(222, 82, 17);
+    background: rgba(209, 4, 4, 0.978);
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     transition: 0.9s;
     border: none;
     color: white;
-    
 }
 
 .form-container button:hover {
-    background-color: rgba(133, 7, 7, 0.992);  
+    background-color: rgba(133, 7, 7, 0.992);
+}
+
+/* Media Query para telas menores (exemplo: até 768px) */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 1;
+        margin: 0; /* Remova a margem horizontal em telas menores */
+    }
+
+    .form-row {
+        flex-direction: column; /* Alinhe os campos verticalmente */
+        align-items: flex-start;
+    }
 }
 /* Aqui termina o estilo do formulário passagem */
 
